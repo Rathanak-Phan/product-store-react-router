@@ -4,6 +4,7 @@ import Home from './page/Home'
 import Product from './page/Product'
 import Cart from './page/Cart'
 import Header from './components/Header'
+import NotFound from './page/NotFound'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/' element={<Home />}/>
           <Route path='/products' element={<Product />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
