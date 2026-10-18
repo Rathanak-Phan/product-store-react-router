@@ -7,6 +7,8 @@ import NotFound from './page/NotFound'
 import DashboardLayout from './components/DashboardLayout'
 import Overviews from './components/Overviews'
 import PageLayout from './components/PageLayout'
+import products from './data/products'
+import ProductDetails from './page/ProductDetails'
 
 function App() {
 
@@ -27,7 +29,8 @@ function App() {
 
           <Route path='/admin' element={<DashboardLayout />}>
             <Route path='/admin' element={<Overviews />}/>
-            <Route path='/admin/products' element={<Product />} />
+            <Route path='/admin/products' element={<Product products={products}/>} />
+            <Route path='/admin/product/:id' element={<ProductDetails />} />
           </Route>
 
           <Route path='*' element={<NotFound />} />
