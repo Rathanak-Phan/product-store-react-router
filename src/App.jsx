@@ -3,10 +3,10 @@ import './App.css'
 import Home from './page/Home'
 import Product from './page/Product'
 import Cart from './page/Cart'
-import Header from './components/Header'
 import NotFound from './page/NotFound'
 import DashboardLayout from './components/DashboardLayout'
 import Overviews from './components/Overviews'
+import PageLayout from './components/PageLayout'
 
 function App() {
 
@@ -14,13 +14,16 @@ function App() {
     <>
       
       <BrowserRouter>
-        {/*  */}
-        <Header />
+        {/* <Header /> */}
 
         <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/products' element={<Product />} />
-          <Route path='/cart' element={<Cart />} />
+          <Route path='/' element={<PageLayout />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/products' element={<Product />} />
+            <Route path='/cart' element={<Cart />} />
+          </Route>
+
+
 
           <Route path='/admin' element={<DashboardLayout />}>
             <Route path='/admin' element={<Overviews />}/>
