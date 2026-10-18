@@ -1,14 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Home from './page/Home'
-import Product from './page/Product'
-import Cart from './page/Cart'
-import NotFound from './page/NotFound'
-import DashboardLayout from './components/DashboardLayout'
-import Overviews from './components/Overviews'
 import PageLayout from './components/PageLayout'
+import HomePage from './page/HomePage'
+import ProductPage from './page/ProductPage'
+import CartPage from './page/CartPage'
+import NotFoundPage from './page/NotFoundPage'
+
+import DashboardLayout from './components/dashboard/DashboardLayout'
+import Overviews from './components/dashboard/ui/Overviews'
+import Product from './components/dashboard/ui/Product'
+import ProductDetails from './components/dashboard/ui/ProductDetails'
 import products from './data/products'
-import ProductDetails from './page/ProductDetails'
 
 function App() {
 
@@ -20,9 +22,9 @@ function App() {
 
         <Routes>
           <Route path='/' element={<PageLayout />}>
-            <Route path='/' element={<Home />} />
-            <Route path='/products' element={<Product />} />
-            <Route path='/cart' element={<Cart />} />
+            <Route path='/' element={<HomePage />} />
+            <Route path='/products' element={<ProductPage />} />
+            <Route path='/cart' element={<CartPage />} />
           </Route>
 
 
@@ -33,7 +35,7 @@ function App() {
             <Route path='/admin/product/:id' element={<ProductDetails />} />
           </Route>
 
-          <Route path='*' element={<NotFound />} />
+          <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </>

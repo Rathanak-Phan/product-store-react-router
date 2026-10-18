@@ -1,6 +1,6 @@
 import React from 'react'
 
-function NotFound() {
+function NotFoundPage() {
   return (
     <main className='w-screen h-screen flex justify-center items-center'>
         <div className='text-5xl font-bold'>404 NotFound</div>
@@ -8,4 +8,4 @@ function NotFound() {
   )
 }
 
-export default NotFound
+export default NotFoundPage

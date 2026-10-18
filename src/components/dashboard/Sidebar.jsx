@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Sidebar() {
   return (
-    <div className='flex flex-col bg-gray-400 h-screen'>
+    <div className='flex flex-col bg-gray-400 h-screen fixed w-80'>
         <div className='px-2 py-5 text-2xl text-center'>Admin</div>
 
         <Link

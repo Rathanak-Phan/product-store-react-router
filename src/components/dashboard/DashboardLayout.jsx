@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom'
 function DashboardLayout() {
   return (
     <main className='flex'>
-        <div className='w-84'>
+        <div className='min-w-80'>
             <Sidebar />
         </div>
 
